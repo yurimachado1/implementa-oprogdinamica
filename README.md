@@ -36,10 +36,11 @@ A programação dinâmica é uma técnica de otimização usada em problemas de 
     
 * O programa solicitará as coordenadas do ponto de destino.
 
-    Resultados:
-        O programa exibirá o mapa com o caminho mais curto marcado com setas (← → ↑ ↓) e custos associados.
+#### Resultados:
+       
+* O programa exibirá o mapa com o caminho mais curto marcado com setas (← → ↑ ↓) e custos associados.
         
-        A saída também indicará o custo total do caminho e as coordenadas visitadas.
+* A saída também indicará o custo total do caminho e as coordenadas visitadas.
 
 ### Requisitos
 
