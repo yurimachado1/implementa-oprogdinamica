@@ -13,8 +13,11 @@ A programação dinâmica é uma técnica de otimização usada em problemas de 
     Preparação do Mapa:
 
         Crie um arquivo de texto chamado map.txt com a definição do mapa. O arquivo deve ter pelo menos três linhas:
+           
             A primeira linha deve conter as dimensões do mapa (largura e altura).
+            
             A segunda linha deve indicar as coordenadas do ponto de partida.
+            
             As linhas subsequentes representam a matriz de custos do mapa.
 
         Exemplo:
@@ -29,9 +32,9 @@ A programação dinâmica é uma técnica de otimização usada em problemas de 
 
 ## Execução do Programa:
    
-    Execute o script Python no terminal ou prompt de comando.
+* Execute o script Python com o comando (**python main py**) no terminal ou prompt de comando. 
     
-    O programa solicitará as coordenadas do ponto de destino.
+* O programa solicitará as coordenadas do ponto de destino.
 
     Resultados:
         O programa exibirá o mapa com o caminho mais curto marcado com setas (← → ↑ ↓) e custos associados.
