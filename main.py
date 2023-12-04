@@ -341,39 +341,38 @@ def print_path(path, input_file):
     end_coordinate = input_file.end
     end_key = (end_coordinate.x, end_coordinate.y)
     size = input_file.size
-    line_count = 0
     best_path = get_best_path(path)
-    while line_count < size.height:
-        column_count = 0
+
+    print("Mapa:")
+    for line_count in range(size.height):
         line = ''
-        while column_count < size.width:
+        for column_count in range(size.width):
             coordinate = (column_count, line_count)
             cost = input_file.matrix[line_count][column_count]
             if coordinate == start_key:
-                line += ' S '
+                line += ' 🚀 '  # Ícone para o ponto de partida
             elif coordinate == end_key:
-                line += ' E '
+                line += ' 🏁 '  # Ícone para o ponto de destino
             elif coordinate in best_path:
                 line += best_path[coordinate]
             elif cost < 0:
-                line += ' ■ '
+                line += ' ■ '  # Obstáculo
             else:
-                line += '   '
+                line += '   '  # Caminho livre
 
-            column_count += 1
-
-        print(line + '\n')
-        line_count += 1
+        print(line)
 
 def print_exit(cost, coordinates):
-    exit_message = f'{cost}'
-    count = 0
-    while count < len(coordinates):
-        coordinate = coordinates[count]
-        x, y = coordinate
-        exit_message += f'  {x},{y}'
-        count += 1
-    print(exit_message)
+    print("\nResultado Final:")
+    print(f"Custo total do caminho: {cost}")
+
+    if coordinates:
+        print("Coordenadas visitadas:")
+        for coordinate in coordinates:
+            x, y = coordinate
+            print(f"  - ({x},{y})")
+
+    print("\nO caminho mais curto está marcado no mapa acima.")
         
 if __name__ == '__main__':
     current_directory = get_current_directory()
